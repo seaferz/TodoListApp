@@ -33,5 +33,17 @@ namespace TodoListApp.Logic
                 Console.WriteLine("-------------------");
             }
         }
+        public void AddTask(string description)
+        {
+            if(!string.IsNullOrEmpty(description))
+            {
+                _todoList.Add(new TodoItem(4, description));
+                Console.WriteLine("Task added successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Task description cannot be empty.");
+            }
+        }
     }
 }
