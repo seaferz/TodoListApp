@@ -47,7 +47,7 @@ namespace TodoListApp.Logic
         }
         public bool ToggleleTaskComplection(int taskId)
         {
-            var taskToToggle = _todoList.FirstOrDefault(t = t => t.Id == taskId);
+            var taskToToggle = _todoList.FirstOrDefault(t => t.Id == taskId);
             if(taskToToggle != null)
             {
                 taskToToggle.IsCompleted = !taskToToggle.IsCompleted;
