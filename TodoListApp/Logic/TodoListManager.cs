@@ -45,5 +45,20 @@ namespace TodoListApp.Logic
                 Console.WriteLine("Task description cannot be empty.");
             }
         }
+        public bool ToggleleTaskComplection(int taskId)
+        {
+            var taskToToggle = _todoList.FirstOrDefault(t = t => t.Id == taskId);
+            if(taskToToggle != null)
+            {
+                taskToToggle.IsCompleted = !taskToToggle.IsCompleted;
+                Console.WriteLine($"Task {taskId} complection status updated");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"Task with ID {taskId} not found");
+                return false;
+            }
+        }
     }
 }
