@@ -56,7 +56,7 @@ namespace TodoListApp.Logic
             }
             else
             {
-                Console.WriteLine($"Task with ID {taskId} not found");
+                Console.WriteLine($"task with ID {taskId} not found");
                 return false;
             }
         }
