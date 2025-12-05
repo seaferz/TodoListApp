@@ -13,7 +13,9 @@ namespace TodoListApp.Models
         public bool IsCompleted { get; set; }
         public TodoItem (int id, string description)
         {
-            Id = id; Description = description; IsCompleted = false;
+            Id = id; 
+            Description = description; 
+            IsCompleted = false;
 
         }
         public string GetStatusDisplay()
